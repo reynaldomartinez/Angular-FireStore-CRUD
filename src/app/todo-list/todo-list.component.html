@@ -6,3 +6,13 @@
 
   <button type="button" class="btn btn-primary" (click)="add()">Add Todo</button>
 </div>
+
+<hr>
+
+<ul>
+  <li class="mb-3" *ngFor="let item of items">{{item.timestamp.toDate() | date:'fullTime'}}
+    <button class="btn btn-primary" (click)="update(item)">Update</button>
+    <button class="btn btn-danger ml-2" (click)="delete(item)">Delete</button>
+    <hr>
+  </li>
+</ul>
